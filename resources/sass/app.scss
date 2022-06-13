@@ -1,1 +1,23 @@
 //
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+// HEADER
+// MAIN
+h1 {
+    text-align: center;
+}
+
+// FOOTER
+#site_footer {
+    p {
+        text-align: center;
+    }
+}

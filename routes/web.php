@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 // - Rimandato a App/Http/Controllers
-Route::get('/', 'MovieController@Movie');
+Route::get('/', 'MovieController@list');

@@ -1,3 +1,5 @@
+@extends('layouts.app')
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -11,12 +13,12 @@
 
         <!-- Styles -->
         <style>
-           h1{
-            text-align: center;
-           }
+           
         </style>
     </head>
     <body>
+        @section ('content')
         <h1>Hey ciao!</h1>
+        @endsection    
     </body>
 </html>
