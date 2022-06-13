@@ -2,33 +2,43 @@
 
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+  <title>Laravel</title>
 
-        <!-- Styles -->
-        <style>
-           
-        </style>
-    </head>
-    <body>
-        @section ('content')
-        <h1>Hey ciao! Stampo a schermo i film</h1>
-        <div class="movies">
-            @foreach ($movies as $movie)
-            <div class="card text-start">
-              <div class="card-body">
-                <h4 class="card-title">Title: {{$movie->TItle}}</h4>
-                <p class="card-text">Description: {{$movie->Description}}</p>
-              </div>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+
+  </style>
+</head>
+
+<body>
+  @section ('content')
+  <h1 class="mb-5">Lista Films</h1>
+  <div class="movies">
+    <div class="container">
+      <div class="row row-cols-3 p-2 g-3">
+        @foreach ($movies as $movie)
+        <div class="col">
+          <div class="card text-start">
+            <img src="{{$movie->thum}}" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Title: {{$movie->title}}</h4>
+              <p class="card-text">Description: {{$movie->description}}</p>
             </div>
-            @endforeach
+          </div>
         </div>
-        @endsection    
-    </body>
+        @endforeach
+      </div>
+    </div>
+  </div>
+  @endsection
+</body>
+
 </html>
