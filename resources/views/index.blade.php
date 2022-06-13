@@ -18,7 +18,17 @@
     </head>
     <body>
         @section ('content')
-        <h1>Hey ciao!</h1>
+        <h1>Hey ciao! Stampo a schermo i film</h1>
+        <div class="movies">
+            @foreach ($movies as $movie)
+            <div class="card text-start">
+              <div class="card-body">
+                <h4 class="card-title">{{$movie->TItle}}</h4>
+                <p class="card-text">Body</p>
+              </div>
+            </div>
+            @endforeach
+        </div>
         @endsection    
     </body>
 </html>
