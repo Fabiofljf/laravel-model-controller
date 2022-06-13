@@ -15,4 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // - Rimandato a App/Http/Controllers
-Route::get('/', 'MovieController@list');
+Route::get('/', 'PageController@home'); // - Percorso della home
+
+Route::get('/', 'MovieController@list'); // - Percorso della della lista film
+

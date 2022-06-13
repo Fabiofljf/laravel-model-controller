@@ -14,6 +14,6 @@ class MovieController extends Controller
         // - all() è metodo statico con il quale prendiamo tutto ciò che si trova nella tabella movies.
         $movies = movie::all();
         //dd($movies);
-        return view('index', compact('movies'));
+        return view('movies.index', compact('movies'));
     }
 }
